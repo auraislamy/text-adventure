@@ -1,0 +1,889 @@
+#include <iostream>
+using namespace std;
+
+#define garis "	=============================================================================================================================================\n"
+
+int main(){
+	/* Intro */
+	cout << "	===========================================================\n";
+	cout << "	Selamat datang di The Elementalist: Battle For The Power\n";
+	cout << "\n";
+	cout << "	Di game ini kamu harus memilih pilihan yang tepat, agar \n";
+	cout << "	kamu bisa mendapatkan energy dan elemen untuk melawan musuh\n";
+	cout << "	dan memenangkan pertarungan!\n";
+	cout << "	===========================================================\n";	
+	cout << "\n";
+	
+	
+	// How to play the games
+	cout << garis;
+	cout << "	Cara menjalankan game:\n";
+	cout << "\n";
+	cout << "	Untuk lanjut cerita input huruf 'n' (tanpa tanda petik)\n";
+	cout << "\n";
+	cout << "	Cara game berjalan:\n";
+	cout << "\n";
+	cout <<	"	->Untuk memenangkan game ini kamu harus:\n";
+	cout << "\n";
+	cout << "		->Mempunyai Energi yang cukup untuk melawan musuh.\n";
+	cout << "		->Energi awalmu adalah 5, jika kamu menang melawan setiap musuh kamu mendapatkan 1 energi, jika kamu kalah energimu akan berkurang 1.\n";
+	cout << "\n";
+	cout <<	"	->Jika kamu tidak berhasil mendapatkan kekuatan pada setiap pertarungan, energimu akan hilang 1 lagi untuk melawan musuh.\n";
+	cout << garis;
+	cout << "\n";
+	
+	// start the game
+	char next = 'n';
+	string name;
+	cout << "	Input nama yang kamu inginkan\n";
+	cout << "\n";
+	cout << "	>>Nama: ";
+	cin >> name;
+	cout << "\n";
+	cout << "	Mulai game?\n"; 
+	cout << "\n";
+	cout << "	>>Input (n): ";
+	cin >> next;
+	cout << "\n";
+	cout << "\n";
+	cout << "\n";
+	
+	//countdown
+	int i = 12;
+	while (i > 0){
+		cout << "	" << i << "...";
+		i--;
+	}	
+	
+	cout << "\n";
+	cout << "\n";
+	cout << "\n";
+	cout << "	============================================================\n";
+	cout << "\n";
+	cout << "	Selamat datang di pertarungan elementalist!\n";
+	cout << "\n";
+	cout << "	Pertarungan akan dimulai dari sekarang, bersiaplah!\n";
+	cout << "\n";
+	cout << "	============================================================\n";
+	cout << "\n";
+	
+	cout << 	"	>>Next (n): "; 
+	cin >> next;
+	
+	// first battle-story
+	cout << "	=======================================================================================\n";
+	cout << "	"<<name << "	: 'Raife.. Apa yang kau mau dari kekuatanku?!'\n";
+	cout << "\n";
+	cout << "	Raife memiringkan kepalanya kesamping, memujimu.\n";
+	cout << "\n";
+	cout << "	Raife	: 'Aku terkesan. Kau terlihat sepertinya mengerjakan semua pr mu.'\n"; 
+	cout << "\n";
+	cout << "	"<< name << "	: 'Tapi kekuatan itu hanya cerita lama. Itu cuma mistis!\n'";
+	cout << "\n";
+	cout << "	Raife	: 'Tapi mitos berasal dari sesuatu. Pasti selalu ada sedikit\n";
+	cout << "		   	kebenaran dari cerita itu...'\n";
+	cout << "\n";
+	cout << "	Seringainya semakin maniak, dan sebuah getaran ketakutan mengalir di tulang belakangmu.\n";
+	cout << "	=======================================================================================\n";
+	cout << "\n";
+	
+	cout << "	>>Next (n): "; 
+	cin >> next;
+	cout << "\n";
+	
+	cout << "	=======================================================================================\n";
+	cout << "	Raife	: 'Dan akhirnya aku telah memecahkan bagaimana untuk mengakses kekuatan itu!'\n";
+	cout << "\n";
+	cout << "	"<<name << "	: 'Apa yang mau kau lakukan dengan kekuatan itu?'\n";
+	cout << "\n";
+	cout << "	Raife	: 'Aku akan menggunakanmu untuk memiliki semua elemen yang ada!'\n";
+	cout << "\n";
+	cout << "	"<<name << "	: 'Bermimpilah! Itu tidak akan terjadi.'\n";
+	cout << "\n";
+	cout << "	Kamu bersiap dan memposisikan diri untuk pertahanan.\n";
+	cout << "	=======================================================================================\n";
+	cout << "\n";
+	
+	cout << "	>>Next (n): "; 
+	cin >> next;
+	cout << "\n";
+	
+	cout << "	=======================================================================================\n";
+	cout << "	Raife	: 'Bersiaplah untuk mati jika begitu!'\n";
+	cout << "\n";
+	cout << "	Raife mengangkat kedua tangannya, dan segorombolan monster bayangan mengarah kepadamu, dengan mata penuh kebencian.\n";
+	cout << "\n";
+	cout << "	Monster	: 'Krrrrraaaahhhhh!'\n";
+	cout << "\n";
+	cout << "	Raife	: 'Dapatkan mereka!'\n";
+	cout << "\n";
+	cout << "	Sebuah makhluk bayangan raksasa mengarah kepadamu!\n";
+	cout << "\n";
+	cout << "	Monster	: 'ROOOOAAAARR!'\n";
+	cout << "\n";
+	cout << "	Makhluk itu menggeram dan mengayunkan cakarnya yang besar kearahmu!\n";
+	cout << "\n";
+	cout << "	Kamu melihat tangannya yang semakin dekat dan dekat, fokus pada waktu yang sangat cepat berlalu!\n";
+	cout << "\n";
+	cout << "	"<<name << " : (Apa yang kamu lakukan?)\n";
+	cout << "\n";
+	
+	/* first choice */
+	char pil1;
+	for (int i = 0; i < 2 && pil1 != 'A' && pil1 != 'B'; i++){
+		
+		cout << "	Enter A		: Gunakan mantra bernafas di air!\n";
+		cout << "\n";
+		cout << "	Enter B		: Gunakan mantra pertahanan!\n";
+		cout << "\n";
+		cout << "	>>(Pilihanmu)	: ";
+		cin >> pil1;
+	}
+	
+	int energy = 5;
+	string elements[3];
+	string enemy[3];
+	
+	/* conditional statements for the choice that user choose*/
+	switch (pil1){
+		case 'A':
+			energy--;
+			elements[0] = "(empty)";
+			enemy[0] = "failed";
+			
+			cout << "\n";
+			cout << "	=======================================================================================\n";
+			cout << "	"<< name << "	: 'Aku hanya harus bernafas...(?)'\n";
+			cout << "\n";
+			cout << "	Kamu menutup matamu dan fokus untuk menghirup udara, hanya dengan menyadari kamu bukan dibawah air!\n";
+			cout << "\n";
+			cout << "	Monster	: 'HRRAAAHHH!!!'\n";
+			cout << "\n";
+			cout << "	Makhluk itu mengayunkan cakarnya ke sampingmu, melukai tangan sebelah kanan mu dan mendorongmu jauh menabrak dinding!\n";
+			cout << "\n";
+			cout << "	"<< name << "	: 'Hgggkkk!'\n";
+			cout << "\n";
+			
+			cout << "	===Failed for the first defense!====\n";
+			cout << "\n";
+			cout << "			Defense-- (minus)\n";	   
+			cout << "\n";
+			cout << "	 Kekuatan matahari (tidak terkoleksi) \n";
+			cout << "\n";
+			cout << "		  Musuh terkoleksi: GAGAL\n";
+			cout << "	====================================\n";
+			cout << "\n";
+			
+			cout << "	>>Next (n): "; 
+			cin >> next;
+			cout << "\n";
+			
+			cout << "	Kamu mencoba bangun dan memfokuskan pikiran untuk melawannya.\n";
+			cout << "\n";
+			break;
+			
+		case 'B':
+			energy++;
+			elements[0] = "MATAHARI";	
+			enemy[0] = "Monster Bayangan Raksasa";
+			
+			cout << "\n";
+			cout << "	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n";
+			cout << "	"<<name << "	: 'SOLIS!'\n";
+			cout << "	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n";
+			cout << "\n";
+			cout << "	Sihir meledak disekitarmu dan perisaimu muncul, mengiris tangan monster itu sampai habis!\n";
+			cout << "\n";
+			cout << "	Monster bayangan: RAAAAHHH!?\n";
+			cout << "\n";
+			cout << "	Monster itu melolong kesakitan dan terbentur kebelakang!\n";
+			cout << "\n";
+			
+			cout << "	================SUN SHIELD (PELINDUNG MATAHARI)=======================\n";
+			cout << "		Kamu menggunakan mantra pertahanan untuk melindungi dirimu!\n";
+			cout << "\n";
+			cout << "		Defense++ (plus)\n";
+			cout << "\n";
+			cout << "		Elemen matahari (berhasil terkoleksi!)\n";
+			cout << "\n";
+			cout << "		Musuh terkoleksi: Monster Bayangan Raksasa!\n";
+			cout << "	======================================================================\n";
+		 	cout << "\n";
+		 	
+		 	cout << "	>>Next (n): "; 
+			cin >> next;
+			cout << "\n";
+		 	
+		 	cout << "	"<<name << "	: Kamu tidak bisa mendapatkanku disini. :)\n";
+		 	break;
+		 	
+		 	default:
+		 		cout << "	Maaf, kamu tidak memasukkan pilihan yang valid.\n";
+		 		cout << "	Goodbye!\n";
+		 		return 0;
+		 		
+	}
+	
+	/* 
+	testing increment/decrement & array
+	cout << "Energy: " << energy << "\n";
+	cout << elements[0]; 
+	*/
+	
+	/* the end of the first battle */
+	cout << "\n";
+	cout << "	=================================================================================================================================\n";
+	cout << "	Kamu melihat monster-monster lain disekitarmu, mencoba untuk melawan makhluk-makhluk yang menguasai lab.\n";
+	cout << "\n";
+	cout << "	Bersiap, kamu melemparkan bola api berkali-kali ke arah monster bayangan kecil, menjatuhkan mereka dengan akurasi yang mematikan!\n";
+	cout << "\n";
+	cout << "	Monster	: Hhhhhssssshhhhsshhhhhs!?\n";
+	cout << "\n";
+	cout << "	Monster-monster itu perlahan-lahan jatuh ke tanah, mata mereka menutup dan cahaya ditubuhnya menjadi gelap!\n";
+	cout << "\n";
+	cout << "	Monster	: ...\n";
+	cout << "	=================================================================================================================================\n";
+	cout << "\n";
+	
+	cout << "	>>Next (n): "; 
+	cin >> next;
+	cout << "\n";
+	
+	if (energy > 5){
+		cout << "	=================================================================================================================================\n";
+		cout << "	Kamu menutup matamu, rasa panas dari kekuatan mataharimu keluar dari dalam tubuhmu.\n";
+		cout << "\n";
+		cout << "	"<< name << "	: 'Say goodbye!'\n";
+		cout << "\n";
+		cout << "	Sebuah cahaya terang menembak keluar dari tanganmu dan menyerang kesemua sisa monster bayangan yang ada di ruangan!\n";
+		cout << "\n";
+		cout << "	Batu kehidupan dari monster-monster itu berjatuhan ke tanah sebagaimana tubuh mereka hancur, meninggalkan ruangan sunyi senyap.\n";
+		cout << "	=================================================================================================================================\n";
+
+		cout << "\n";
+		
+		cout << "	>>Next (n): "; 
+		cin >> next;
+		cout << "\n";
+			
+	} else if (energy < 5){
+		
+		energy--;
+		cout << "	=================================================================================================================================\n";
+		cout << "	Kamu menutup matamu, dan mencoba untuk mengambil elemen api dari perapian yang berada diruangan tersebut.\n";
+		cout << "\n";
+		cout << "	Setelah mencoba untuk membangun kekuatan api dari tubuhmu, kamu bersiap untuk meluncurkannya kepada monster-monter itu.\n";
+		cout << "\n";
+		cout << "	"<< name << "	: 'Say goodbye!'\n";
+		cout << "\n";
+		cout << "	Sebuah bola api besar menembak keluar dari tanganmu dan menyerang kesemua sisa monster bayangan yang ada di ruangan!\n";
+		cout << "\n";
+		cout << "	Batu kehidupan dari monster-monster itu berjatuhan ke tanah sebagaimana tubuh mereka hancur, meninggalkan ruangan sunyi senyap.\n";
+		cout << "\n";
+		cout << "	Setelah mengeluarkan kekuatan tersebut dari dalam tubuhmu, kamu jatuh ke tanah, menyadari bahwa hal itu mengambil energi yang tersisa ditubuhmu.\n";
+		cout << "\n";
+		cout << "	[Energy-- (minus)]\n";
+		cout << "	=================================================================================================================================\n";
+		cout << "\n";
+		
+	}
+	
+	/*second battle*/
+	
+	cout << "	=================================================================================================================================\n";
+	cout << "	"<< name << "	: 'Dan sekarang, giliran Raife untuk dihabisi!'\n";
+	cout << "\n";
+	cout << "	Tapi, sebelum kamu maju untuk mengejar Raife, sebuah tangan menarik pergelangan kakimu!\n";
+	cout << "\n";
+	cout <<	"	Seseorang	: 'Kau ikut dengan kami!'\n";
+	cout << "\n";
+	cout << "	Seorang pria menarikmu ke dalam genangan air di lantai, ke dalam kegelapan!\n";
+	cout << "	=================================================================================================================================\n";
+	cout << "\n";
+	
+	cout << "	>>Next (n): "; 
+	cin >> next;
+	cout << "\n";
+	
+	cout << "	=================================================================================================================================\n";
+	cout << "	"<< name<< "	: 'AAAAHH!'\n";
+	cout << "\n";
+	cout << "	Kamu keluar dari portal ke dalam gua lembap yang diterangi dengan cahaya menakutkan.\n";
+	cout << "\n";
+	cout << "	Dua antek Raife meningkatkan mantra mereka, sihir berputar-putar di sekitar mereka!\n";
+	cout << "\n";
+	cout << "	Pesuruh 2	: 'Semoga kamu menyukai suasananya!'\n";
+	cout << "\n";
+	cout << "	Mereka menyerangmu dengan kekuatan logam dan kekuatan bumi kearahmu!\n";
+	cout << "\n";
+	cout << "	Kamu manjatuhkan tubuhmu ke tanah hanya sebelum pecahan besi dan batu menusukmu!\n";
+	cout << "\n";
+	cout << "	Saat kamu berjuang untuk berdiri lagi, dua pesuruh itu berlari dengan sihir bersinar di tangan mereka!\n";
+	cout << "	=================================================================================================================================\n";
+	cout << "\n";
+	
+	/* second choice */
+	cout << "	(Mantra apa yang ingin kamu gunakan?)\n";
+	cout << "\n";
+	char pil2;
+	for (int i = 0; i < 2 && pil2 != 'A' && pil2 != 'B'; i++){
+		
+		cout << "	Enter A		: Mantra Retak!\n";
+		cout << "\n";
+		cout << "	Enter B		: Mantra Getah!\n";
+		cout << "\n";
+		cout << "	>>(Pilihanmu)	: ";
+		cin >> pil2;
+	}
+	
+//	int energy = 5;
+//	string elements[5];
+//	string enemy[3];
+	
+	/* conditional statements for the choice that user choose*/
+	switch (pil2){
+		case 'A':
+			energy++;
+			energy++;
+			elements[1] = "BUMI";
+			enemy[1] = "Antek Raife";
+			
+			cout << "\n";
+			cout << "	=======================================================================================\n";
+			cout << "	"<< name << "	: 'Rrrahh!!!'\n";
+			cout << "\n";
+			cout << "	Tanahpun bergetar dan retak dibawah kaki pesuruh-pesuruh itu!\n";
+			cout << "\n";
+			cout << "	Pesuruh 1	: 'Dia akan menghancurkan tempat ini!'\n";
+			cout << "\n";
+			cout << "	"<< name << "	: 'Consume!'\n";
+			cout << "\n";
+			cout << "	Bumi membelah terbuka dibawah mereka, dan merekapun jatuh kedalam jurang!\n";
+			cout << "\n";
+			cout << "	Pesuruh 1, 2	: 'AAAHHHHHHH!!'\n";
+			cout << "\n";
+			cout << "	"<< name << "	: 'Aku tidak tahu apa alasan Raife menjadikan kalian pesuruh, dasar lemah.'\n";
+			cout << "\n";
+			
+			cout << "	===========================KEKUATAN BUMI=======================\n";
+			cout << "		Kamu menggunakan mantra serangan untuk menyerang musuhmu!\n";
+			cout << "\n";
+			cout << "		Defense++ (plus)\n";
+			cout << "\n";
+			cout << "		Elemen Bumi (berhasil terkoleksi!)\n";
+			cout << "\n";
+			cout << "		Musuh terkoleksi: Antek Lemah Raife!\n";
+			cout << "	======================================================================\n";
+		 	cout << "\n";
+			 
+			cout << "	>>Next (n): "; 
+			cin >> next;
+			cout << "\n";
+			 			
+			break;
+			
+		case 'B':
+			energy--;
+			energy--;
+			elements[1] = "(gagal)";	
+			enemy[1] = "(kalah)";
+			
+			cout << "\n";
+			cout << "	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n";
+			cout << "	"<<name << "	: 'ARRRGHHH!'\n";
+			cout << "	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n";
+			cout << "\n";
+			cout << "	Kamu mencoba menyerang mereka dengan elemen getah, tetapi didalam gua itu tidak terdapat satupun pohon.\n";
+			cout << "\n";
+			cout << "	Pesuruh 2	: HAHhaaHA! Apa yang dia coba lakukan??\n";
+			cout << "\n";
+			cout << "	Kedua pesuruh itu tertawa dan langsung menyerangmu dengan sihir mereka, menjatuhkanmu lagi dan menyayat tubuhmu dengan pecahan batu!\n";
+			cout << "\n";
+			
+			cout << "	===Failed for the second offence!====\n";
+			cout << "\n";
+			cout << "			Attack-- (minus)\n";	   
+			cout << "\n";
+			cout << "	 Kekuatan bumi (tidak terkoleksi) \n";
+			cout << "\n";
+			cout << "		  Musuh terkoleksi: GAGAL\n";
+			cout << "	====================================\n";
+			cout << "\n";
+		 	
+		 	cout << "	>>Next (n): "; 
+			cin >> next;
+			cout << "\n";
+		 	
+		 	break;
+		 	
+		 	default:
+		 		cout << "	Maaf, kamu tidak memasukkan pilihan yang valid.\n";
+		 		cout << "	Goodbye!\n";
+		 		return 0;
+	}
+	
+	if (energy < 5){
+		
+		cout << "	=======================================================================================================\n";
+		cout << "		Kamu gagal untuk melawan Raife yang ingin menguasai dunia sihir dengan kejahatan!\n";
+		cout << "\n";
+		cout << "		Main lagi untuk memenangkan pertarungan dan mencegah kejahatan Raife menyebar!\n";
+		cout << "\n";
+		cout << "	Terima Kasih sudah bermain game ini! Semoga game kecil ini bisa menghilangkan stress-mu untuk sesaat^^!\n";
+		cout << "	=======================================================================================================\n";
+		
+		cout << "\n";
+		cout << "	=======================================================================================================\n";
+		cout << "	                                   Laporan Hasil pertarunganmu!\n";
+		cout << "\n";
+		cout << "	Sisa Energi	: "<< energy << "\n";
+		cout << "\n";
+		cout << "	Koleksi Kekuatan: \n";
+		
+		elements[2] = "(gagal)";
+		for (int i = 0; i < 3; i++){
+			cout << "	->" << elements[i] << "\n";
+			cout << "\n";
+		}
+		
+		cout << "\n";
+		cout << "	Koleksi Musuh: \n";
+		enemy[2] = "(kalah)";
+		for (int i = 0; i < 3; i++){
+			cout << "	->" << enemy[i] << "\n";
+			cout << "\n";
+		}
+		cout << "	=======================================================================================================\n";
+
+		cout << "\n";
+		cout << "	>>Credits (n): "; 
+		cin >> next;
+		cout << "\n";			
+		cout << "	The story is from Choice: The Elementalist Book 1\n";
+		cout << "\n";
+		cout << "	------------Create By: Aura Islamy---------------\n";
+		cout << "	------------------Thank You----------------------\n";
+		
+		return 0;
+		
+	}
+	
+	/* last battle with raife */
+	int raife_energy = 10;
+	const int last_power = 3;
+	
+	if (elements[0] == "MATAHARI"){
+		cout << "	=================================================================================================================================\n";
+		cout << "	Kamu masuk ke dalam portal, dengan energi matahari yang sudah bersinar di telapak tanganmu!\n";
+		cout << "\n";
+		cout << "	" << name << "	: 'Percobaan yang bagus, Raife, tapi pelayanmu tidak cukup kuat untuk menangkapku.'\n";
+		cout << "\n";
+		cout << "	Sihirmu meledak kearahnya, membuat dia kakinya terangkat dari tanah dan tubuhnya terbanting ke dinding!\n";
+		cout << "\n";
+		cout << "	Raife	: 'Aaargh'!\n";
+		cout << "\n";
+		
+		cout << "	[Bonus attack for collecting SUN ELEMENT!]\n";
+		cout << "	[Raife Energy-- (minus)]\n";
+		cout << "	[Raife Energy-- (minus)]\n";
+		cout << "\n";
+		
+		raife_energy--;
+		raife_energy--;
+		
+	} else {
+		
+		cout << "	Kamu masuk ke dalam portal, untuk menghabisi Raife!\n";
+		cout << "\n";
+		cout << "	Dengan sangat marah, kamu mengambil elemen air dari ramuan yang berada di meja dan mengguyurkannya ke wajah Raife!\n";
+		cout << "\n";
+		cout << "	Raife	: 'Aaargh'!\n";
+		cout << "\n";
+		
+		cout << "	[Raife Energy-- (minus)]\n";
+		cout << "	[Raife Energy-- (minus)]\n";
+		cout << "	[Energy-- (minus)]\n";
+		cout << "\n";
+		
+		raife_energy--;
+		raife_energy--;
+		energy--;
+	
+	}
+	
+	cout << "	Raife	: 'Beraninya KAU?! Dasar anak jahanam!'\n";
+	cout << "\n";
+	cout << "	Tiba-tiba, gelombang kelegapan memutarimu dan menghadangmu dari menyerang Raife.\n";
+	cout << "\n";
+	cout << "	Kamu ingat kamu membawa Batu Energi yang berada dikantong celanamu.\n";
+	cout << "\n";
+	cout << "	Sayangnya, kamu lupa bagaimana cara menggunakan kekuatan dari batu tersebut.\n";
+	cout << "\n";
+	
+	/* third choice */
+	cout <<	"	(Apa yang kamu lakukan?)\n";
+	cout << "\n";
+	char pil3;
+	for (int i = 0; i < 2 && pil3 != 'A' && pil3 != 'B'; i++){
+		
+		cout << "	Enter A		: Menyerang Raife dengan Batu Energi!\n";
+		cout << "\n";
+		cout << "	Enter B		: Menyerap energi Batu Energi!\n";
+		cout << "\n";
+		cout << "	>>(Pilihanmu)	: ";
+		cin >> pil3;
+	}
+	
+	/* conditional statements for the choice that user choose*/
+	switch (pil3){
+		case 'A':
+			elements[2] = "(gagal)";
+			enemy[2] = "Raife";
+			
+			cout << "\n";
+			cout << "	=====================================================================================================\n";
+			cout << "	Kamu melemparkan batu itu kearah Raife, berharap batu tersebut melakukan sesuatu dengan sendirinya...\n";
+			cout << "\n";
+			cout << "	" << name << "	: '...huh?'\n";
+			cout << "\n";
+			cout << "	Feelingmu salah, kamu ingat ternyata batu tersebut untuk diserap energinya...\n";
+			cout << "\n";
+			cout << "	Raife	: 'Berani-beraninya kau main-main denganku!'";
+			cout << "\n";
+			cout << "	Raife mengangkat tangannya dan membuat pecahan-pecahan es yang tajam dan besar mengarah kepadamu...\n";
+			cout << "\n";
+			cout << "	Dengan sigap, kamu langsung menghentakkan kakimu dan membangun dinding perlindungan untuk tubuhmu!\n";
+			cout << "\n";
+			cout << "	Karena kecepatanmu, setengah dari potongan-potongan es tersebut tidak mengenai tubuhmu..\n";
+			cout << "\n";
+			cout << "	Tetapi karena es tersebut ada banyak sekali, sebagian dari pecahan tersebut menyayat wajah dan tubuhmu...\n";
+			cout << "\n";
+			cout << "	Membuat banyak darah mengalir keluar dari tubuhmu..\n";
+			
+			energy--;
+			
+			cout << "\n";
+			
+			cout << "	====Failed for the last defense!====\n";
+			cout << "\n";
+			cout << "			Defense-- (minus)\n";	   
+			cout << "\n";
+			cout << "	 Kekuatan ES (tidak terkoleksi) \n";
+			cout << "\n";
+			cout << "	====================================\n";
+			cout << "\n";
+			
+			cout << "	>>Next (n): "; 
+			cin >> next;
+			cout << "\n";
+			
+			cout << "	=================================================================================================================================\n";
+			cout << "	Dengan sisa energi yang ada, kamu memfokuskan diri untuk mengalahkan Raife lagi.\n";
+			cout << "\n";
+			cout << "	Kamu berpikir untuk mengakhir semua sebelum Raife melepaskan semua kekuatannya..\n";
+			cout << "\n";
+			cout << "	Mencoba untuk menstabilkan energi dan sihir yang kamu keluarkan, kamu melakukan pernapasan...\n";
+			cout << "\n";
+			cout << "	"<< name << "	: 'Akan kuakhiri semua ini, untuk yang terbaik.'\n";
+			cout << "	=================================================================================================================================\n";
+			cout << "\n";
+			
+			cout << "	>>Next (n): "; 
+			cin >> next;
+			cout << "\n";
+			
+			cout << "	=================================================================================================================================\n";
+			cout << "	Kamu menggabungkan semua elemen yang ada didalam dirimu, menarik nafas dengan sangat kuat...\n";
+			cout << "\n";
+			cout << "	"<< name << "	: 'MATILAH KAU RAIFE! ARRRRGGGHHHH!!!'\n";
+			cout << "\n";
+			cout << "	Kamu mengarahkan serangan tersebut ke arah Raife, Kamu mendengar tulang-tulangnya remuk dan membuatnya terbang jauh!\n";
+			cout << "\n";
+			cout << "	Raife	: 'HAAARGH!!'\n";
+			cout << "\n";
+			
+			raife_energy = raife_energy - 4;
+			cout << "	[ Raife Energy-- (minus) 4X ]\n";
+			cout << "	=================================================================================================================================\n";
+			cout << "\n";
+			
+			cout << "	>>Next (n): "; 
+			cin >> next;
+			cout << "\n";
+			
+			cout << "	=================================================================================================================================\n";
+			cout << "	Mengeluarkan kekuatan yang tersisa, kamu menyerangnya lagi membuat kulitnya robek dan membuatnya jatuh ke tanah dengan keras.\n";
+			
+			energy = energy - last_power;
+			
+			cout << "\n";
+			cout << "	Raife	: 'TIDAAAAKKKK!!!'\n";
+			cout << "\n";
+			
+			raife_energy = raife_energy - 4;
+			cout << "	[ Raife Energy-- (minus) 4X ]\n";
+			cout << "	[ Energy-- (minus) 3X ]\n";
+			
+			cout << "\n";
+			cout << "	Kamu mendatangi Raife, tubuhnya patah, dan nafasnya berderik melalui giginya.\n";
+			cout << "\n";
+			cout << "	Tapi karena kehabisan energi, kamu jatuh ke tanah, detak jantungmu berdegup kencang...\n";
+			cout << "\n";
+			cout << "	Perasaanmu campur aduk... Tapi, satu yang pasti.. Kamu sudah membunuh orang yang telah membunuh keluargamu...\n";
+			
+			cout << "\n";
+			cout << "	=====================================KEMENANGAN====================================\n";
+			cout << "\n";
+			cout << "	Kamu tidak mempunyai energi yang cukup untuk mengatakan kata terakhir dengan Raife!\n";
+			cout << "\n";
+			cout << "	                       Main lagi untuk mengetahui alasan Raife!\n";
+			cout << "\n";
+			cout << "	===================================================================================\n";
+		 	cout << "\n";
+		 	
+		 	cout << "	>>Next (n): "; 
+			cin >> next;
+			cout << "\n";
+		 	
+		 	cout << "\n";
+			cout << "	================================     ! SELAMAT !      =================================================\n";
+			cout << "\n";
+			cout << "	              Kamu berhasil mengalahkan Raife\n";
+			cout << "\n";
+			cout << "	Terima Kasih sudah bermain game ini! Semoga game kecil ini bisa menghilangkan stress-mu untuk sesaat^^!\n";
+			cout << "\n";
+			cout << "	=======================================================================================================\n";
+			
+			cout << "\n";
+			cout << "	=======================================================================================================\n";
+			cout << "	                                   Laporan Hasil pertarunganmu!\n";
+			cout << "\n";
+			cout << "	Sisa Energi	: "<< energy << "\n";
+			cout << "\n";
+			cout << "	Energi Raife	: " << raife_energy << "\n";
+			cout << "\n";
+			cout << "	Koleksi Elemen: \n";
+			cout << "\n";
+			
+			for (int i = 0; i < 3; i++){
+				cout << "	->" << elements[i] << "\n";
+				cout << "\n";
+			}
+			
+			cout << "\n";
+			cout << "	Koleksi Musuh:	\n";
+			cout << "\n";
+			for (int i = 0; i < 3; i++){
+				cout << "	->" << enemy[i] << "\n";
+				cout << "\n";
+			}
+			cout << "\n";
+			cout << "	=======================================================================================================\n";
+		 	
+		 	cout << "\n";
+		 	cout << "	>>Credits (n): "; 
+			cin >> next;
+			cout << "\n";
+			
+			cout << "	The story is from Choice: The Elementalist Book 1\n";
+			cout << "\n";
+			cout << "	------------Create By: Aura Islamy---------------\n";
+			cout << "	------------------Thank You----------------------\n";
+			
+			
+			return 0;
+			
+		case 'B':
+			energy++;
+			elements[2] = "ES";	
+			enemy[2] = "Raife";
+			raife_energy = raife_energy - 8;
+			
+			cout << "\n";
+			cout << "	=====================================================================================================\n";
+			cout << "	Dengan sigap, kamu langsung menghentakkan kakimu dan membangun dinding perlindungan untuk tubuhmu!\n";
+			cout << "\n";
+			cout << "	Karena kecepatanmu, potongan-potongan es tersebut tidak mengenai tubuhmu..\n";
+			cout << "\n";
+			
+			cout << "	>>Next (n): "; 
+			cin >> next;
+			cout << "\n";
+			
+			
+			cout << "	=================================================================================================================================\n";
+			cout << "	Kamu menggegam batu tersebut dengan sangat kuat, dan kekuatan mengalir kedalam tubuhmu!\n";
+			cout << "\n";
+			cout << "	"<< name << "	: 'Kau tidak akan menyukai ini, Raife.'\n";
+			cout << "\n";
+			cout << "	Kamu menyerang kearahnya, kombinasi kekuatanmu dan kekuatan tambahan yang kamu dapatkan berputar ditanganmu.\n";
+			cout << "\n";
+			cout << "	Es muncul dari jarimu dan kamu melemparkan pecahan mematikan kepada Raife!\n";
+			cout << "\n";
+			cout << "	Raife	: RRRRRAAAAAAAHHHHHHH!!!\n";
+			cout << "	=================================================================================================================================\n";
+			cout << "\n";
+			
+			cout << "	>>Next (n): "; 
+			cin >> next;
+			cout << "\n";
+			
+			cout << "	=================================================================================================================================\n";
+			cout << "	Pecahan tajam tersebut menembus lurus ke dada Raife, Es tersebut berubah warna menjadi keunguan,\n";
+			cout << "\n";
+			cout << "	Raife berteriak saat sihir tersebut meleleh dan menyebar ke dalam tubuhnya!\n";
+			cout << "\n";
+			cout << "	Raife	: 'GGGGGAAAAAAAHHHHHH!!'\n";
+			cout << "\n";
+			cout << "	Dia jatuh berlutut, lalu wajahnya menghantam ke tanah.\n";
+			cout << "\n";
+			cout << "	" << name << "	: 'Terima kasih atas bantuannya, Elsa. /(Batu Energi)'\n";
+			cout << "\n";
+			cout << "	Kamu berpikir untuk mengakhir semua sebelum Raife melepaskan semua kekuatannya..\n";
+			cout << "\n";
+			cout << "	Mencoba untuk menstabilkan energi dan sihir yang kamu keluarkan, kamu melakukan pernapasan...\n";
+			cout << "\n";
+			cout << "	Kamu sangat puas dan bangga telah bertahan dengan diri sendiri selama pertarungan!\n";
+			cout << "\n";
+			cout << "	"<< name << "	: 'Akan kuakhiri semua ini, untuk yang terbaik.'\n";
+			cout << "	=================================================================================================================================\n";
+			cout << "\n";
+			
+			cout << "	>>Next (n): "; 
+			cin >> next;
+			cout << "\n";
+			
+			cout << "	=================================================================================================================================\n";
+			cout << "	Kamu menggabungkan semua elemen yang ada didalam dirimu, menarik nafas dengan sangat kuat...\n";
+			cout << "\n";
+			cout << "	"<< name << "	: 'MATILAH KAU RAIFE! ARRRRGGGHHHH!!!'\n";
+			cout << "\n";
+			cout << "	Kamu mengarahkan serangan tersebut ke arah Raife, Kamu mendengar tulang-tulangnya remuk dan membuatnya terbang jauh!\n";
+			cout << "\n";
+			cout << "	Raife	: 'HAAARGH!!'\n";
+			cout << "\n";
+			cout << "	Masih ada kekuatan yang tersisa, kamu menyerangnya lagi membuat kulitnya robek dan membuatnya jatuh ke tanah dengan keras.\n";
+			cout << "\n";
+			cout << "	Raife	: 'TIDAAAAKKKK!!!'\n";
+			cout << "\n";
+			cout << "	Kamu mendatangi Raife, tubuhnya patah, dan nafasnya berderik melalui giginya.\n";
+			cout << "\n";
+			 
+			cout << "	===============================KEMENANGAN MANIS==============================\n";
+			cout << "\n";
+			cout << "	Kamu mempunyai energi yang cukup untuk mengatakan kata terakhir dengan Raife!\n";
+			cout << "\n";
+			cout << "	=============================================================================\n";
+		 	cout << "\n";
+		 	
+		 	cout << "	>>Next (n): "; 
+			cin >> next;
+			cout << "\n";
+		 	
+			cout << "	=================================================================================================================================\n";
+		 	cout << "	Raife	: 'Jangan.. sombong...'\n";
+		 	cout << "\n";
+		 	cout << "	"<<name << "	: 'Aku tidak merasa sombong. Aku merasa sedih karena kau telah merusak hidup banyak orang,\n";
+		 	cout << "\n";
+		 	cout << "	"<<name << "	:  dan marah karena kau telah menyakiti orang-orang yang kusayang!'\n";
+		 	cout << "\n";
+		 	cout << "	"<<name << "	: 'Kau telah membunuh kedua orang tuaku. Kau membunuh banyak anak-anak hanya untuk mencari aku!'\n";
+		 	cout << "\n";
+		 	cout << "	"<<name << "	: 'Dan pada akhirnya, itu tidak menghasilkan apa-apa! Kau tidak mendapatkan apa-apa, dan malah semua orang yang kehilangan.'\n";
+			cout << "	=================================================================================================================================\n";
+		 	cout << "\n";
+		 	
+		 	cout << "	>>Next (n): "; 
+			cin >> next;
+			cout << "\n";
+		 	
+			cout << "	=================================================================================================================================\n";
+		 	cout << "	Raife	: 'Simpan saja cerita sedihmu... Aku tidak akan pernah menyesal telah mengejar kekuatan abadi...'\n";
+		 	cout << "\n";
+		 	cout << "	Raife	: 'Kau pikir ini akan berakhir hanya karena kau telah mengalahkanku?'\n";
+		 	cout << "\n";
+		 	cout << "	Raife	: 'Kau tidak tahu bagaimana pentingan dirimu, dari orang-orang yang mau memanfaatkanmu, untuk takdir menjadi sekuat dirimu.'\n";
+		 	cout << "\n";
+		 	cout << "	Raife	: 'Ini bukan yang terakhir, nak. Ini hanya pembukaannya--'\n";
+		 	cout << "\n";
+		 	cout << "	"<< name << "	: 'DIAM!!!'\n";
+			cout << "	=================================================================================================================================\n";
+		 	cout << "\n";
+		 	
+		 	cout << "	>>Next (n): "; 
+			cin >> next;
+			cout << "\n";
+		 	
+			cout << "	=================================================================================================================================\n";
+		 	cout << "	Kamu mengangkat tanganmu untuk memberikan pukulan terakhir...\n";
+		 	cout << "\n";
+		 	cout << "	Mengambil kekuatan bumi-mu, kamu menggerakkan reruntuhan bebatuan ke udara, lalu menembakkannya ke Raife,\n";
+		 	cout << "\n";
+		 	cout << "	Batu-batu tersebut jatuh ke tubuhnya dan menenggelamkannya menjadi seperti makam.\n";
+		 	cout << "\n";
+		 	cout << "	Raife berteriak sangat kuat dan dalam beberapa detik suaranya menghilang...\n";
+			cout << "	=================================================================================================================================\n";
+		 	cout << "\n";
+		 	
+		 	energy = energy - last_power;
+		 	
+		 	
+		 	cout << "	>>Next (n): "; 
+			cin >> next;
+			cout << "\n";
+		 	
+		 	cout << "\n";
+			cout << "	================================     ! SELAMAT !      =================================================\n";
+			cout << "\n";
+			cout << "	              Kamu berhasil mengalahkan Raife dan Pelayannya!\n";
+			cout << "\n";
+			cout << "	Terima Kasih sudah bermain game ini! Semoga game kecil ini bisa menghilangkan stress-mu untuk sesaat^^!\n";
+			cout << "\n";
+			cout << "	=======================================================================================================\n";
+			
+			cout << "\n";
+			cout << "	=======================================================================================================\n";
+			cout << "	                                   Laporan Hasil pertarunganmu!\n";
+			cout << "\n";
+			cout << "	Sisa Energi	: "<< energy << "\n";
+			cout << "\n";
+			cout << "	Energi Raife	: " << raife_energy << "\n";
+			cout << "\n";
+			cout << "	Koleksi Elemen: \n";
+			cout << "\n";
+			
+			for (int i = 0; i < 3; i++){
+				cout << "	->" << elements[i] << "\n";
+				cout << "\n";
+			}
+			
+			cout << "\n";
+			cout << "	Koleksi Musuh:	\n";
+			cout << "\n";
+			for (int i = 0; i < 3; i++){
+				cout << "	->" << enemy[i] << "\n";
+				cout << "\n";
+			}
+			cout << "\n";
+			cout << "	=======================================================================================================\n";
+		 	
+		 	cout << "\n";
+		 	cout << "	>>Credits (n): "; 
+			cin >> next;
+			cout << "\n";
+			
+			cout << "	The story is from Choice: The Elementalist Book 1\n";
+			cout << "\n";
+			cout << "	------------Create By: Aura Islamy---------------\n";
+			cout << "	------------------Thank You----------------------\n";
+			
+		 	return 0;
+		 	
+	 	default:
+		 	cout << "	Maaf, kamu tidak memasukkan pilihan yang valid.\n";
+		 	cout << "	Goodbye!\n";
+		 	return 0;
+		 		
+	}
+	
+}
